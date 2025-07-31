@@ -72,12 +72,12 @@ public class Main {
         short E = -159;
         short F = 27897;
         byte G = 67;
-        byte LyudmilaPavlovnaHasStudents = 23;
-        byte AnnaSergeevnaHasStudents = 27;
-        byte EkaterinaAndreevnaHasStudents = 30;
+        byte lyudmilaPavlovnaHasStudents = 23;
+        byte annaSergeevnaHasStudents = 27;
+        byte ekaterinaAndreevnaHasStudents = 30;
         short totalNumberOfPaper = 480;
         int forEachStudentPaper = totalNumberOfPaper
-                / ( LyudmilaPavlovnaHasStudents + AnnaSergeevnaHasStudents + EkaterinaAndreevnaHasStudents );
+                / ( lyudmilaPavlovnaHasStudents + annaSergeevnaHasStudents + ekaterinaAndreevnaHasStudents );
         System.out.println( "На каждого ученика рассчитано " + forEachStudentPaper + " листов бумаги");
         byte bottleProductionCapacity = 16 / 2 ;
         int quantityIn20Minutes = bottleProductionCapacity * 20;
@@ -103,11 +103,11 @@ public class Main {
         short amountOfMilk = 200;
         byte amountOfIceCream = 2;
         byte numberOfEggs = 4;
-        int headOfAthleteWeight = numberOfBananas * bananaWeight + amountOfMilk / 100 * milk100mlWeight
-                + amountOfIceCream * iceCreamWeight + numberOfEggs * eggWeight;
-        float convertToKgHeadOfAthleteWeight = (float) headOfAthleteWeight / 1000;
-        System.out.println( "Рецепт спортзавтрака спортсмена составил " + headOfAthleteWeight + " гр,"
-                + " соответственно " + convertToKgHeadOfAthleteWeight + " кг" );
+        System.out.println( "Рецепт спортзавтрака спортсмена составил "
+                + ( numberOfBananas * bananaWeight + amountOfMilk / 100 * milk100mlWeight
+                + amountOfIceCream * iceCreamWeight + numberOfEggs * eggWeight ) + " гр,"
+                + " соответственно " + (float) ( numberOfBananas * bananaWeight + amountOfMilk / 100 * milk100mlWeight
+                + amountOfIceCream * iceCreamWeight + numberOfEggs * eggWeight ) / 1000 + " кг" );
         byte athleteNeedsToLose = 7;
         short lose250g = 250;
         short lose500g = 500;
