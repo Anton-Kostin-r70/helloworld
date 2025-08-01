@@ -162,25 +162,37 @@ public class Main {
         }
         short speed = 60;
         boolean isSpeeding = speed > 60;
-        if ( !isSpeeding && speed < 60 ) {
+        if ( !isSpeeding && speed <= 60 ) {
             System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
         }
-        else if ( isSpeeding ) {
+        else {
             System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
         }
         byte ears = 7;
         System.out.print( "Если возраст человека равен " + ears + ", то ему нужно ходить " );
         if ( ears >= 2 && ears <= 6 ) {
-            System.out.print("в детский сад");
+            System.out.print( "в детский сад") ;
         }
         else if ( ears >= 7 && ears <= 17 ) {
-            System.out.print("в школу");
+            System.out.print( "в школу" );
         }
         else if ( ears >= 18 && ears <= 24 ) {
-            System.out.print("в университет");
+            System.out.print( "в университет" );
         }
         else if ( ears > 24 ) {
-            System.out.print("на работу");
+            System.out.print( "на работу" );
+        }
+        boolean hasAdult = true;
+        ears = 5;
+        System.out.print( "Если возраст ребенка равен " + ears + " то ему " );
+        if ( ears < 5 ) {
+            System.out.print("нельзя кататься на аттракционе");
+        }
+        else if ( ears >= 5 && ears < 14 && hasAdult ) {
+            System.out.print("можно кататься на аттракционе в сопровождении");
+        }
+        else if ( ears >= 14 ) {
+            System.out.print("можно кататься без сопровождения взрослого");
         }
         byte numberOfSeatsInCarriage = 102;
         byte seatingPlaces = 60;
@@ -197,14 +209,13 @@ public class Main {
         int one = 1;
         int two = 2;
         int three = 3;
-        if ( one < two && two < three ) {
-            System.out.println(three);
+        int max = one;
+        if ( two > max ) {
+            max = two;
         }
-        else if ( one < two && two > three ) {
-            System.out.println(two);
+        if ( three > max ) {
+            max = three;
         }
-        else if ( one > two && two > three ) {
-            System.out.println(one);
-        }
+        System.out.println( max );
     }
 }
