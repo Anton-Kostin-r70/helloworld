@@ -138,5 +138,73 @@ public class Main {
                 + " Годовой доход вырос на " + denisAnnualIncome * seniorityCoefficient + " рублей");
         System.out.println ( "Кристина теперь получает " + newChristinSalary + " рублей."
                 + " Годовой доход вырос на " + christinAnnualIncome * seniorityCoefficient + " рублей");
+        // the HOMEWORK 4
+        byte ege = 39;
+        if ( ege >= 18 ) {
+            System.out.println("Он совершеннолетний");
+        }
+        else if ( ege > 0 && ege < 18 ) {
+            System.out.println("Он не достиг совершеннолетия, нужно немного подождать");
+        }
+        float temperatureOutside = 30;
+        boolean isCold = temperatureOutside < 5;
+        if ( !isCold && temperatureOutside > 5 ) {
+            System.out.println("Сегодня тепло, можно идти без шапки");
+        }
+        else if ( isCold ) {
+            System.out.println("На улице холодно, нужно надеть шапку");
+        }
+        if ( !isCold && temperatureOutside > 5 ) {
+            System.out.println("На улице " + temperatureOutside + ", можно идти без шапки");
+        }
+        else if ( isCold ) {
+            System.out.println("На улице " + temperatureOutside + ", нужно надеть шапку");
+        }
+        short speed = 60;
+        boolean isSpeeding = speed > 60;
+        if ( !isSpeeding && speed < 60 ) {
+            System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
+        }
+        else if ( isSpeeding ) {
+            System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
+        }
+        byte ears = 7;
+        System.out.print( "Если возраст человека равен " + ears + ", то ему нужно ходить " );
+        if ( ears >= 2 && ears <= 6 ) {
+            System.out.print("в детский сад");
+        }
+        else if ( ears >= 7 && ears <= 17 ) {
+            System.out.print("в школу");
+        }
+        else if ( ears >= 18 && ears <= 24 ) {
+            System.out.print("в университет");
+        }
+        else if ( ears > 24 ) {
+            System.out.print("на работу");
+        }
+        byte numberOfSeatsInCarriage = 102;
+        byte seatingPlaces = 60;
+        byte freeSpace = 80;
+        if ( freeSpace <= seatingPlaces ) {
+            System.out.println("В вагоне есть места сидячие");
+        }
+        else if ( freeSpace > seatingPlaces && freeSpace <= numberOfSeatsInCarriage ) {
+            System.out.println("В вагоне есть места стоячие");
+        }
+        else {
+            System.out.println("Вагон уже полностью забит");
+        }
+        int one = 1;
+        int two = 2;
+        int three = 3;
+        if ( one < two && two < three ) {
+            System.out.println(three);
+        }
+        else if ( one < two && two > three ) {
+            System.out.println(two);
+        }
+        else if ( one > two && two > three ) {
+            System.out.println(one);
+        }
     }
 }
