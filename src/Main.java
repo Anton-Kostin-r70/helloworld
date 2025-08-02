@@ -148,21 +148,21 @@ public class Main {
         }
         float temperatureOutside = 30;
         boolean isCold = temperatureOutside < 5;
-        if ( !isCold && temperatureOutside > 5 ) {
+        if ( !isCold ) {
             System.out.println( "Сегодня тепло, можно идти без шапки" );
         }
-        else if ( isCold ) {
+        else {
             System.out.println( "На улице холодно, нужно надеть шапку" );
         }
-        if ( !isCold && temperatureOutside > 5 ) {
+        if ( !isCold ) {
             System.out.println( "На улице " + temperatureOutside + ", можно идти без шапки" );
         }
-        else if ( isCold ) {
+        else {
             System.out.println( "На улице " + temperatureOutside + ", нужно надеть шапку" );
         }
         short speed = 60;
         boolean isSpeeding = speed > 60;
-        if ( !isSpeeding && speed <= 60 ) {
+        if ( !isSpeeding ) {
             System.out.println( "Если скорость " + speed + ", то можно ездить спокойно" );
         }
         else {
