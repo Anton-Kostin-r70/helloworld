@@ -144,26 +144,26 @@ public class Main {
             System.out.println("Он совершеннолетний");
         }
         else if ( ege > 0 && ege < 18 ) {
-            System.out.println("Он не достиг совершеннолетия, нужно немного подождать");
+            System.out.println( "Он не достиг совершеннолетия, нужно немного подождать" );
         }
         float temperatureOutside = 30;
         boolean isCold = temperatureOutside < 5;
         if ( !isCold && temperatureOutside > 5 ) {
-            System.out.println("Сегодня тепло, можно идти без шапки");
+            System.out.println( "Сегодня тепло, можно идти без шапки" );
         }
         else if ( isCold ) {
-            System.out.println("На улице холодно, нужно надеть шапку");
+            System.out.println( "На улице холодно, нужно надеть шапку" );
         }
         if ( !isCold && temperatureOutside > 5 ) {
-            System.out.println("На улице " + temperatureOutside + ", можно идти без шапки");
+            System.out.println( "На улице " + temperatureOutside + ", можно идти без шапки" );
         }
         else if ( isCold ) {
-            System.out.println("На улице " + temperatureOutside + ", нужно надеть шапку");
+            System.out.println( "На улице " + temperatureOutside + ", нужно надеть шапку" );
         }
         short speed = 60;
         boolean isSpeeding = speed > 60;
         if ( !isSpeeding && speed <= 60 ) {
-            System.out.println("Если скорость " + speed + ", то можно ездить спокойно");
+            System.out.println( "Если скорость " + speed + ", то можно ездить спокойно" );
         }
         else {
             System.out.println("Если скорость " + speed + ", то придется заплатить штраф");
@@ -174,13 +174,13 @@ public class Main {
             System.out.print( "в детский сад") ;
         }
         else if ( ears >= 7 && ears <= 17 ) {
-            System.out.print( "в школу" );
+            System.out.print( "в школу\n" );
         }
         else if ( ears >= 18 && ears <= 24 ) {
-            System.out.print( "в университет" );
+            System.out.print( "в университет\n" );
         }
         else if ( ears > 24 ) {
-            System.out.print( "на работу" );
+            System.out.print( "на работу\n" );
         }
         boolean hasAdult = true;
         ears = 5;
@@ -189,10 +189,10 @@ public class Main {
             System.out.print("нельзя кататься на аттракционе");
         }
         else if ( ears >= 5 && ears < 14 && hasAdult ) {
-            System.out.print("можно кататься на аттракционе в сопровождении");
+            System.out.print("можно кататься на аттракционе в сопровождении\n");
         }
         else if ( ears >= 14 ) {
-            System.out.print("можно кататься без сопровождения взрослого");
+            System.out.print("можно кататься без сопровождения взрослого\n");
         }
         byte numberOfSeatsInCarriage = 102;
         byte seatingPlaces = 60;
@@ -206,14 +206,14 @@ public class Main {
         else {
             System.out.println("Вагон уже полностью забит");
         }
-        int one = 1;
+        int one = 5;
         int two = 2;
         int three = 3;
         int max = one;
-        if ( two > max ) {
+        if ( two >= max ) {
             max = two;
         }
-        if ( three > max ) {
+        if ( three >= max ) {
             max = three;
         }
         System.out.println( max );
