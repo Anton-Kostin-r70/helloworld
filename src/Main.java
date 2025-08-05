@@ -280,5 +280,47 @@ public class Main {
                     System.out.println("Такого сезона нет");
             }
         }
+        // the HOMEWORK 6
+        for (int j = 1; j <= 10; j++) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+        for (int j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+        for (int j = 0; j <= 17; j++) {
+            if (j % 2 == 0) {
+                System.out.print(j + " ");
+            }
+        }
+        System.out.println();
+        for (int j = 10; j >= -10; j--) {
+            System.out.print(j + " ");
+        }
+        for (int y = 1904; y <= 2096; y += 4) {
+            System.out.println(y + " год является високосным");
+        }
+        for (int j = 1; j <= 14; j++) {
+            System.out.print(j * 7 + " ");
+        }
+        System.out.println();
+        for (int j = 0; j < 10; j++) {
+            System.out.print((int) Math.pow(2, j) + " ");
+        }
+        System.out.println();
+        double monthSavings = 0D;
+        for (int month = 1; month <= 12; month++) {
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + (monthSavings += 29000) + " рублей");
+        }
+        monthSavings = 0D;
+        for (int month = 1; month <= 12; month++) {
+            monthSavings = monthSavings * 1.01 + 29000;
+            System.out.println("Месяц " + month
+                    + ", сумма накоплений равна " + String.format("%.2f", monthSavings) + " рублей");
+        }
+        for (int j = 1; j <= 10; j++) {
+            System.out.println("2*" + j + "=" + 2 * j);
+        }
     }
 }
