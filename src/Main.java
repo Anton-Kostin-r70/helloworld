@@ -219,34 +219,24 @@ public class Main {
         System.out.println( max );
         // the HOMEWORK 5
         byte clientOS = 0;
-        switch( clientOS ) {
-            case 0:
-                System.out.println( "Установите версию приложения для iOS по ссылке" );
-                break;
-            case 1:
-                System.out.println( "Установите версию приложения для Android по ссылке" );
-                break;
-            default:
-                System.out.println( "Операционная система не определена" );
+        if ( clientOS == 0 ) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else {
+            System.out.println( "Установите версию приложения для Android по ссылке" );
         }
         short clientDeviceYear = 2015;
-        switch( clientOS ) {
-            case 0: {
-                if ( clientDeviceYear > 2015 )
-                    System.out.println( "Установите версию приложения для iOS по ссылке" );
-                else
-                    System.out.println( "Установите облегченную версию приложения для iOS по ссылке" );
-                break;
-            }
-            case 1: {
-                if ( clientDeviceYear > 2015 )
-                    System.out.println( "Установите версию приложения для Android по ссылке" );
-                else
-                    System.out.println( "Установите облегченную версию приложения для Android по ссылке" );
-                break;
-            }
-            default:
-                System.out.println( "Операционная система не определена" );
+        if( clientOS == 0 &&  clientDeviceYear > 2015 ) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }
+        else if ( clientOS == 0 &&  clientDeviceYear <= 2015 ) {
+            System.out.println( "Установите облегченную версию приложения для iOS по ссылке" );
+        }
+        if( clientOS == 1 &&  clientDeviceYear > 2015 ) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        else if ( clientOS == 1 && clientDeviceYear <= 2015 ) {
+            System.out.println( "Установите облегченную версию приложения для Android по ссылке" );
         }
         short year = 2021;
         if ( ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ) && year > 1584 )
@@ -264,7 +254,7 @@ public class Main {
         else if ( deliveryDistance >= 60 && deliveryDistance <= 100 ) {
             days = 3;
         }
-        else if ( deliveryDistance > 100 ) {
+        else {
             System.out.println( "Доставки нет" );
         }
         switch ( days ) {
