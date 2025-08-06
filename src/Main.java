@@ -339,48 +339,48 @@ public class Main {
             System.out.print(j + " ");
         }
         System.out.println();
-        int populatioNumberPeople = 12000000;
+        int populationNumberPeople = 12000000;
         for (year = 2025; year <= 2025 + 10; year++) {
             System.out.println("Год " + year + ", численность населения составляет "
-                    + populatioNumberPeople);
-            populatioNumberPeople = populatioNumberPeople + (populatioNumberPeople * (17 - 8) / 1000);
+                    + populationNumberPeople);
+            populationNumberPeople = populationNumberPeople + (populationNumberPeople * (17 - 8) / 1000);
         }
-        double depositVasiliy = 15000;
+        double deposit = 15000;
         month = 1;
-        while (depositVasiliy <= 12000000) {
-            depositVasiliy *= (1 + 0.07);
+        while (deposit <= 12000000) {
+            deposit *= (1 + 0.07);
             System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                    + String.format("%.2f", depositVasiliy));
+                    + String.format("%.2f", deposit));
             month++;
         }
-        depositVasiliy = 15000;
+        deposit = 15000;
         month = 1;
-        while (depositVasiliy <= 12000000) {
-            depositVasiliy *= (1 + 0.07);
-            if (month % 6 == 0)
+        while (deposit <= 12000000) {
+            deposit *= (1 + 0.07);
+            if (month % 6 == 0) {
                 System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                        + String.format("%.2f", depositVasiliy));
+                        + String.format("%.2f", deposit));
+            }
             month++;
         }
-        depositVasiliy = 15000;
+        deposit = 15000;
         year = 9;
         for (month = 1; month <= 12 * year; month++) {
-            depositVasiliy *= (1 + 0.07);
-            if (month % 6 == 0)
+            deposit *= (1 + 0.07);
+            if (month % 6 == 0) {
                 System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                        + String.format("%.2f", depositVasiliy));
-        }
-        int friday = 1;
-        for (int day = 1; day <= 31; day++) {
-            if (day % friday == 0) {
-                System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-                friday += 7;
+                        + String.format("%.2f", deposit));
             }
+        }
+        int firstFriday = 1;
+        for (int day = firstFriday; day <= 31; day += 7) {
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
         }
         short currentYear = 2025;
         for (int y = currentYear - 200; y <= currentYear + 100; y++) {
-            if (y % 79 == 0)
+            if (y % 79 == 0) {
                 System.out.println(y);
+            }
         }
     }
 }
