@@ -345,42 +345,46 @@ public class Main {
                     + populatioNumberPeople);
             populatioNumberPeople = populatioNumberPeople + (populatioNumberPeople * (17 - 8) / 1000);
         }
-        double depositVasiliy = 15000;
+        double vasiliyDeposit = 15000;
         month = 1;
-        while (depositVasiliy <= 12000000) {
-            depositVasiliy *= (1 + 0.07);
+        while (vasiliyDeposit <= 12000000) {
+            vasiliyDeposit *= (1 + 0.07);
             System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                    + String.format("%.2f", depositVasiliy));
+                    + String.format("%.2f", vasiliyDeposit));
             month++;
         }
-        depositVasiliy = 15000;
+        vasiliyDeposit = 15000;
         month = 1;
-        while (depositVasiliy <= 12000000) {
-            depositVasiliy *= (1 + 0.07);
-            if (month % 6 == 0)
+        while (vasiliyDeposit <= 12000000) {
+            vasiliyDeposit *= (1 + 0.07);
+            if (month % 6 == 0) {
                 System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                        + String.format("%.2f", depositVasiliy));
+                        + String.format("%.2f", vasiliyDeposit));
+            }
             month++;
         }
-        depositVasiliy = 15000;
+        vasiliyDeposit = 15000;
         year = 9;
         for (month = 1; month <= 12 * year; month++) {
-            depositVasiliy *= (1 + 0.07);
-            if (month % 6 == 0)
+            vasiliyDeposit *= (1 + 0.07);
+            if (month % 6 == 0) {
                 System.out.println(" Месяц " + month + ", сумма накопления состовляет "
-                        + String.format("%.2f", depositVasiliy));
+                        + String.format("%.2f", vasiliyDeposit));
+            }
         }
-        int friday = 1;
-        for ( int day = 1; day <= 31; day++ ) {
-            if ( day % friday == 0 ) {
-                System.out.println( "Сегодня пятница, " +  friday + "-е число. Необходимо подготовить отчет");
-                friday +=7;
+        int firstFriday = 5;
+        int friday = firstFriday;
+        for (int day = firstFriday; day <= 31; day++) {
+            if (day % friday == 0) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+                friday += 7;
             }
         }
         short currentYear = 2025;
-        for ( int y = currentYear - 200; y <= currentYear + 100; y++ ) {
-            if ( y % 79 == 0 )
-                System.out.println( y );
+        for (int y = currentYear - 200; y <= currentYear + 100; y++) {
+            if (y % 79 == 0) {
+                System.out.println(y);
+            }
         }
     }
 }
