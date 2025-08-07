@@ -386,5 +386,75 @@ public class Main {
                 System.out.println(y);
             }
         }
+        // the HOMEWORK 8
+        int[] masInt = new int[]{ 1, 2, 3 };
+        float[] masFloat = new float[] { 1.57f, 7.654f, 9.986f };
+        int[] mas = new int[30];
+        int lengthMas = mas.length;
+        for ( int k = 0; k < lengthMas; k++ ) {
+            mas[k] = k + 7;
+        }
+        lengthMas = masInt.length;
+        for ( int k = 0; k < lengthMas; k++ ) {
+            System.out.print(masInt[k]);
+            if ( k < lengthMas - 1) {
+                System.out.print( ", " );
+            }
+        }
+        System.out.println();
+        lengthMas = masFloat.length;
+        for ( int k = 0; k < lengthMas; k++) {
+            System.out.print(masFloat[k]);
+            if ( k < lengthMas - 1) {
+                System.out.print( ", " );
+            }
+        }
+        System.out.println();
+        lengthMas = mas.length;
+        for ( int k = 0; k < lengthMas; k++) {
+            System.out.print(mas[k]);
+            if ( k < lengthMas - 1) {
+                System.out.print( ", " );
+            }
+        }
+        System.out.println();
+        lengthMas = masInt.length;
+        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+            System.out.print(masInt[k]);
+            if ( k > 0 ) {
+                System.out.print( ", " );
+            }
+        }
+        System.out.println();
+        lengthMas = masFloat.length;
+        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+            System.out.print(masFloat[k]);
+            if ( k > 0 ) {
+                System.out.print( ", " );
+            }
+        }
+        System.out.println();
+        lengthMas = mas.length;
+        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+            System.out.print(mas[k]);
+            if ( k > 0 ) {
+                System.out.print( ", " );
+            }
+        }
+        lengthMas = masInt.length;
+        for ( int k = 0; k < lengthMas; k++ ) {
+            if ( masInt[k] % 2 != 0 ) {
+                int tmp = masInt[k];
+                masInt[k] = tmp + 1;
+            }
+        }
+        System.out.println();
+        lengthMas = masInt.length;
+        for ( int k = 0; k < lengthMas; k++ ) {
+            System.out.print(masInt[k]);
+            if ( k < lengthMas - 1) {
+                System.out.print( ", " );
+            }
+        }
     }
 }
