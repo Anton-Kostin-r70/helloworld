@@ -322,5 +322,69 @@ public class Main {
         for (int j = 1; j <= 10; j++) {
             System.out.println("2*" + j + "=" + 2 * j);
         }
+        // the HOMEWORK 7
+        double total = 0D;
+        short month = 1;
+        while (total <= 2459000) {
+            total += 15000;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + String.format("%.2f", total) + " рублей");
+            month++;
+        }
+        int j = 1;
+        while (j <= 10) {
+            System.out.print(j++ + " ");
+        }
+        System.out.println();
+        for (j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+        int populatioNumberPeople = 12000000;
+        for (year = 2025; year <= 2025 + 10; year++) {
+            System.out.println("Год " + year + ", численность населения составляет "
+                    + populatioNumberPeople);
+            populatioNumberPeople = populatioNumberPeople + (populatioNumberPeople * (17 - 8) / 1000);
+        }
+        double vasiliyDeposit = 15000;
+        month = 1;
+        while (vasiliyDeposit <= 12000000) {
+            vasiliyDeposit *= (1 + 0.07);
+            System.out.println(" Месяц " + month + ", сумма накопления состовляет "
+                    + String.format("%.2f", vasiliyDeposit));
+            month++;
+        }
+        vasiliyDeposit = 15000;
+        month = 1;
+        while (vasiliyDeposit <= 12000000) {
+            vasiliyDeposit *= (1 + 0.07);
+            if (month % 6 == 0) {
+                System.out.println(" Месяц " + month + ", сумма накопления состовляет "
+                        + String.format("%.2f", vasiliyDeposit));
+            }
+            month++;
+        }
+        vasiliyDeposit = 15000;
+        year = 9;
+        for (month = 1; month <= 12 * year; month++) {
+            vasiliyDeposit *= (1 + 0.07);
+            if (month % 6 == 0) {
+                System.out.println(" Месяц " + month + ", сумма накопления состовляет "
+                        + String.format("%.2f", vasiliyDeposit));
+            }
+        }
+        int firstFriday = 5;
+        int friday = firstFriday;
+        for (int day = firstFriday; day <= 31; day++) {
+            if (day % friday == 0) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+                friday += 7;
+            }
+        }
+        short currentYear = 2025;
+        for (int y = currentYear - 200; y <= currentYear + 100; y++) {
+            if (y % 79 == 0) {
+                System.out.println(y);
+            }
+        }
     }
 }
