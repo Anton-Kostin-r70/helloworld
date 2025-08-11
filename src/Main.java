@@ -493,5 +493,14 @@ public class Main {
             reverseFullName[ln - 1 - n] = tmp;
         }
         System.out.println(reverseFullName);
+        // the HOMEWORK 10
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = lastName + '\s' + firstName + '\s' + middleName;
+        System.out.println("Ф.И.О. сотрудника - " + fullName);
+        System.out.println("Данные Ф.И.О. сотрудника для заполнения отчета - " + fullName.toUpperCase());
+        fullName = "Иванов Семён Семёнович";
+        System.out.println("Данные Ф.И.О. сотрудника - " + fullName.replace('ё', 'е'));
     }
 }
