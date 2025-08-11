@@ -387,74 +387,111 @@ public class Main {
             }
         }
         // the HOMEWORK 8
-        int[] masInt = new int[]{ 1, 2, 3 };
-        float[] masFloat = new float[] { 1.57f, 7.654f, 9.986f };
+        int[] masInt = new int[]{1, 2, 3};
+        float[] masFloat = new float[]{1.57f, 7.654f, 9.986f};
         int[] mas = new int[30];
         int lengthMas = mas.length;
-        for ( int k = 0; k < lengthMas; k++ ) {
+        for (int k = 0; k < lengthMas; k++) {
             mas[k] = k + 7;
         }
         lengthMas = masInt.length;
-        for ( int k = 0; k < lengthMas; k++ ) {
+        for (int k = 0; k < lengthMas; k++) {
             System.out.print(masInt[k]);
-            if ( k < lengthMas - 1) {
-                System.out.print( ", " );
+            if (k < lengthMas - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         lengthMas = masFloat.length;
-        for ( int k = 0; k < lengthMas; k++) {
+        for (int k = 0; k < lengthMas; k++) {
             System.out.print(masFloat[k]);
-            if ( k < lengthMas - 1) {
-                System.out.print( ", " );
+            if (k < lengthMas - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         lengthMas = mas.length;
-        for ( int k = 0; k < lengthMas; k++) {
+        for (int k = 0; k < lengthMas; k++) {
             System.out.print(mas[k]);
-            if ( k < lengthMas - 1) {
-                System.out.print( ", " );
+            if (k < lengthMas - 1) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         lengthMas = masInt.length;
-        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+        for (int k = lengthMas - 1; k >= 0; k--) {
             System.out.print(masInt[k]);
-            if ( k > 0 ) {
-                System.out.print( ", " );
+            if (k > 0) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         lengthMas = masFloat.length;
-        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+        for (int k = lengthMas - 1; k >= 0; k--) {
             System.out.print(masFloat[k]);
-            if ( k > 0 ) {
-                System.out.print( ", " );
+            if (k > 0) {
+                System.out.print(", ");
             }
         }
         System.out.println();
         lengthMas = mas.length;
-        for ( int k = lengthMas - 1; k >= 0; k-- ) {
+        for (int k = lengthMas - 1; k >= 0; k--) {
             System.out.print(mas[k]);
-            if ( k > 0 ) {
-                System.out.print( ", " );
+            if (k > 0) {
+                System.out.print(", ");
             }
         }
         lengthMas = masInt.length;
-        for ( int k = 0; k < lengthMas; k++ ) {
-            if ( masInt[k] % 2 != 0 ) {
+        for (int k = 0; k < lengthMas; k++) {
+            if (masInt[k] % 2 != 0) {
                 int tmp = masInt[k];
                 masInt[k] = tmp + 1;
             }
         }
         System.out.println();
         lengthMas = masInt.length;
-        for ( int k = 0; k < lengthMas; k++ ) {
+        for (int k = 0; k < lengthMas; k++) {
             System.out.print(masInt[k]);
-            if ( k < lengthMas - 1) {
-                System.out.print( ", " );
+            if (k < lengthMas - 1) {
+                System.out.print(", ");
             }
         }
+        // the HOMEWORK 9
+        int[] costs1 = {100000, 200000, 300000, 100000, 300000};
+        int monthExpenses = 0;
+        for (int c = 0; c < costs1.length; c++) {
+            monthExpenses += costs1[c];
+        }
+        System.out.printf("\nСумма трат за месяц составила " + monthExpenses + " рублей");
+        int[] costs2 = {10, 9, 70, 40, 7};
+        int minCost = costs2[0];
+        int maxCost = costs2[0];
+        for (int c = 0; c < costs2.length; c++) {
+            if (minCost > costs2[c]) {
+                minCost = costs2[c];
+            }
+            if (maxCost < costs2[c]) {
+                maxCost = costs2[c];
+            }
+        }
+        System.out.printf("\nМинимальная сумма трат за неделю составила " + minCost + " рублей."
+                + " Максимальная сумма трат за неделю составила " + maxCost + " рублей");
+        int[] costs3 = new int[5];
+        int totalCosts = 0;
+        for (int c = 0; c < costs3.length; c++) {
+            costs3[c] = c + 7;
+        }
+        for (int cost : costs3) {
+            totalCosts += cost;
+        }
+        System.out.println("\nСредняя сумма трат за месяц составила " + (double) totalCosts / costs3.length + " рублей");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int ln = reverseFullName.length;
+        for (int n = 0; n < ln / 2; n++) {
+            char tmp = reverseFullName[n];
+            reverseFullName[n] = reverseFullName[ln - 1 - n];
+            reverseFullName[ln - 1 - n] = tmp;
+        }
+        System.out.println(reverseFullName);
     }
 }
