@@ -466,28 +466,32 @@ public class Main {
         int[] costs2 = {10, 9, 70, 40, 7};
         int minCost = costs2[0];
         int maxCost = costs2[0];
-        for (int c = 0; c < costs2.length - 1; c++) {
-            if (minCost > costs2[c + 1]) {
-                minCost = costs2[c + 1];
+        for (int c = 0; c < costs2.length; c++) {
+            if (minCost > costs2[c]) {
+                minCost = costs2[c];
             }
-            if (maxCost < costs2[c + 1]) {
-                maxCost = costs2[c + 1];
+            if (maxCost < costs2[c]) {
+                maxCost = costs2[c];
             }
         }
         System.out.printf("\nМинимальная сумма трат за неделю составила " + minCost + " рублей."
                 + " Максимальная сумма трат за неделю составила " + maxCost + " рублей");
         int[] costs3 = new int[5];
-        int totalСosts = 0;
+        int totalCosts = 0;
         for (int c = 0; c < costs3.length; c++) {
             costs3[c] = c + 7;
         }
         for (int cost : costs3) {
-            totalСosts += cost;
+            totalCosts += cost;
         }
-        System.out.println("\nСредняя сумма трат за месяц составила " + (double) totalСosts / costs3.length + " рублей");
+        System.out.println("\nСредняя сумма трат за месяц составила " + (double) totalCosts / costs3.length + " рублей");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int n = reverseFullName.length - 1; n >= 0; n--) {
-            System.out.print(reverseFullName[n]);
+        int ln = reverseFullName.length;
+        for (int n = 0; n < ln / 2; n++) {
+            char tmp = reverseFullName[n];
+            reverseFullName[n] = reverseFullName[ln - 1 - n];
+            reverseFullName[ln - 1 - n] = tmp;
         }
+        System.out.println(reverseFullName);
     }
 }
