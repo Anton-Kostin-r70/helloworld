@@ -502,5 +502,42 @@ public class Main {
         System.out.println("Данные Ф.И.О. сотрудника для заполнения отчета - " + fullName.toUpperCase());
         fullName = "Иванов Семён Семёнович";
         System.out.println("Данные Ф.И.О. сотрудника - " + fullName.replace('ё', 'е'));
+        // the HOMEWORK 11
+        checkLeapYear(2021);
+        checkUpdateDevice(0, 2021);
+        System.out.println("Карта будет доставлена через " + getDeliveryDays(95) + " д");
+    }
+
+    static void checkLeapYear(int aYear) {
+        if ((aYear % 4 == 0 && aYear % 100 != 0 || aYear % 400 == 0) && aYear > 1584) {
+            System.out.println(aYear + " год - високосный год");
+        } else {
+            System.out.println(aYear + " год - невисокосный год");
+        }
+    }
+
+    static void checkUpdateDevice(int aOS, int aYear) {
+        if (aOS == 0 && aYear > 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (aOS == 0 && aYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        }
+        if (aOS == 1 && aYear > 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (aOS == 1 && aYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+    }
+
+    static int getDeliveryDays(int aDeliveryDistance) {
+        int result = 0;
+        if (aDeliveryDistance < 20) {
+            result = 1;
+        } else if (aDeliveryDistance >= 20 && aDeliveryDistance < 60) {
+            result = 2;
+        } else if (aDeliveryDistance >= 60 && aDeliveryDistance <= 100) {
+            result = 3;
+        }
+        return result;
     }
 }
