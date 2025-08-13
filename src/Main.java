@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Привет Мир!");
@@ -511,22 +509,22 @@ public class Main {
     }
 
     static void checkLeapYear(int aYear) {
-        if ((aYear % 4 == 0 && aYear % 100 != 0 || aYear % 400 == 0) && aYear > 1584)
+        if ((aYear % 4 == 0 && aYear % 100 != 0 || aYear % 400 == 0) && aYear > 1584) {
             System.out.println(aYear + " год - високосный год");
-        else
+        } else {
             System.out.println(aYear + " год - невисокосный год");
+        }
     }
 
     static void checkUpdateDevice(int aOS, int aYear) {
-        int currentYear = LocalDate.now().getYear();
-        if (aOS == 0 && aYear > currentYear) {
+        if (aOS == 0 && aYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (aOS == 0 && aYear <= currentYear) {
+        } else if (aOS == 0 && aYear <= 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        if (aOS == 1 && aYear > currentYear) {
+        if (aOS == 1 && aYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (aOS == 1 && aYear <= currentYear) {
+        } else if (aOS == 1 && aYear <= 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
     }
