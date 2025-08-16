@@ -1,10 +1,10 @@
 import java.util.Objects;
 
 public class Book {
-    public Book(String aTitle, Author aAuthor, int aYear) {
-        setTitle(aTitle);
-        setAuthor(aAuthor);
-        setPublicationYear(aYear);
+    public Book(String title, Author author, int year) {
+        setTitle(title);
+        setAuthor(author);
+        setPublicationYear(year);
     }
 
     public String getTitle() {
@@ -19,20 +19,22 @@ public class Book {
         return author;
     }
 
-    public void setAuthor(Author aAuthor) throws RuntimeException {
-        if (aAuthor != null) {
-            author = new Author(aAuthor);
+    public void setAuthor(Author author) throws RuntimeException {
+        if (author != null) {
+            this.author = new Author(author);
         } else {
             throw new RuntimeException("Не указан автор");
         }
     }
 
     public int getPublicationYear() {
+
         return publicationYear;
     }
 
-    public void setPublicationYear(int aYear) {
-        publicationYear = aYear;
+    public void setPublicationYear(int year) {
+
+        publicationYear = year;
     }
 
     @Override
