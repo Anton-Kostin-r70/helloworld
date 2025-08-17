@@ -1,6 +1,10 @@
 import java.util.Objects;
 
 public class Book {
+    private String title;
+    private Author author;
+    private int publicationYear;
+
     public Book(String title, Author author, int year) {
         setTitle(title);
         setAuthor(author);
@@ -59,8 +63,4 @@ public class Book {
     public int hashCode() {
         return Objects.hash(title, author, publicationYear);
     }
-
-    private String title = "";
-    private Author author = null;
-    private int publicationYear = 0;
 }
