@@ -1,8 +1,14 @@
+import java.util.Objects;
+
 public class Book {
-    public Book(String aTitle, Author aAuthor, int aYear) {
-        setTitle(aTitle);
-        setAuthor(aAuthor);
-        setPublicationYear(aYear);
+    private String title;
+    private Author author;
+    private int publicationYear;
+
+    public Book(String title, Author author, int year) {
+        setTitle(title);
+        setAuthor(author);
+        setPublicationYear(year);
     }
 
     public String getTitle() {
@@ -17,25 +23,44 @@ public class Book {
         return author;
     }
 
-    public void setAuthor(Author aAuthor) throws RuntimeException {
-        if (aAuthor != null) {
-            author = new Author(aAuthor);
+    public void setAuthor(Author author) throws RuntimeException {
+        if (author != null) {
+            this.author = new Author(author);
         } else {
             throw new RuntimeException("Не указан автор");
         }
     }
 
     public int getPublicationYear() {
+
         return publicationYear;
     }
-    public void setPublicationYear(int aYear) {
-        publicationYear = aYear;
+
+    public void setPublicationYear(int year) {
+
+        publicationYear = year;
     }
 
+    @Override
     public String toString() {
-        return "\"" + getTitle() + "\", " + "автор: " + getAuthor() + ", год изд. " +  getPublicationYear();
+        return "\"" + getTitle() + "\", " + "автор: " + getAuthor() + ", год изд. " + getPublicationYear();
     }
-    private String title = "";
-    private Author author = null;
-    private int publicationYear = 0;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Book book = (Book) o;
+        return publicationYear == book.publicationYear && Objects.equals(title, book.title)
+                && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, publicationYear);
+    }
 }
